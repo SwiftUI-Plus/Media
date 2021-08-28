@@ -1,4 +1,3 @@
-@_exported import Photos
 import SwiftUI
 
 extension PHObject: Identifiable {

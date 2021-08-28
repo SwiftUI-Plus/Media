@@ -2,13 +2,22 @@
 
 # Media 
 
-A SwiftUI dynamic property wrapper for fetching media from your photo library.
+A package for simplifying the user of the camera and the user's photo library in SwiftUI.
+
+## Features
+
+- Dynamic property wrappers for fetching media from the photo library
+- Camera modifier for easily taking a photo
+- ImagePicker modifier for allowing the user to pick a photo from their library
+
+> Note: Permission requests and Info.plist values are not handled by this framework. You should use the standard UI to perform these actions as usual. 
 
 ## Example
 
 Fetch all asset collections of a given type and subtype:
 
 ```swift
+// Its not necessary to `import Photos` as the framework does this for you.
 import Media
 
 struct AlbumsView: View {
@@ -25,7 +34,34 @@ struct AlbumsView: View {
 }
 ```
 
-> Note: Its not necessary to `import Photos` as the framework does this for you.
+For camera or image picker implementations:
+
+```swift
+@State private var takePhoto: Bool = false
+@State private var chooseFromLibrary: Bool = false
+
+var body: some View {
+    VStack(spacing: 20) {
+        Button {
+            takePhoto = true
+        } label: {
+            Text("Take a photo")
+        }
+        .camera(isPresented: $takePhoto) { result in
+            print(try! result.get())
+        }
+
+        Button {
+            chooseFromLibrary = true
+        } label: {
+            Text("Choose from Library")
+        }
+        .imagePicker(isPresented: $chooseFromLibrary) { result in
+            print(try! result.get())
+        }
+    }
+}
+```
 
 ## Inspiration
 
