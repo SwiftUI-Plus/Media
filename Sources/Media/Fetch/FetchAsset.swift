@@ -2,8 +2,6 @@ import UIKit
 import Photos
 import SwiftUI
 
-#warning("This is definitely incomplete and I'm not sure if its even working!")
-
 /// Fetches a single asset
 @propertyWrapper
 struct FetchAsset: DynamicProperty {
