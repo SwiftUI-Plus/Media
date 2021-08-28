@@ -114,3 +114,9 @@ To install using Swift Package Manager, add this to the `dependencies` section o
 `.package(url: "https://github.com/SwiftUI-Plus/Media.git", .upToNextMinor(from: "1.0.0"))`
 
 > Note: The package requires iOS v13+
+
+## Other Packages
+
+If you want easy access to this and more packages, add the following collection to your Xcode 13+ configuration:
+
+`https://benkau.com/packages.json`
