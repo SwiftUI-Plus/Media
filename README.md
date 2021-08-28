@@ -111,6 +111,6 @@ The code is packaged as a framework. You can install manually (by copying the fi
 
 To install using Swift Package Manager, add this to the `dependencies` section of your `Package.swift` file:
 
-`.package(url: "https://github.com/ShapsUI/Media.git", .upToNextMinor(from: "1.0.0"))`
+`.package(url: "https://github.com/SwiftUI-Plus/Media.git", .upToNextMinor(from: "1.0.0"))`
 
 > Note: The package requires iOS v13+
