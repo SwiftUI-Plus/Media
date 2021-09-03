@@ -1,3 +1,4 @@
+#if os(iOS)
 import SwiftUI
 
 public extension View {
@@ -26,3 +27,4 @@ private struct ImagePickerView: View {
         MediaView(isPresented: isPresented, source: .photoLibrary, completion: completion)
     }
 }
+#endif

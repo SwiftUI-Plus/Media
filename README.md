@@ -1,4 +1,6 @@
 ![ios](https://img.shields.io/badge/iOS-13-green)
+![tv](https://img.shields.io/badge/tvOS-13-green)
+![mac](https://img.shields.io/badge/macOS-10.15-green)
 
 # Media 
 

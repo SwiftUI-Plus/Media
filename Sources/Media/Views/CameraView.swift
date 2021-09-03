@@ -1,3 +1,4 @@
+#if os(iOS)
 import SwiftUI
 
 public extension View {
@@ -26,3 +27,4 @@ private struct CameraView: View {
         MediaView(isPresented: isPresented, source: .camera, completion: completion)
     }
 }
+#endif

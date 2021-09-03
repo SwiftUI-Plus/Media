@@ -1,3 +1,4 @@
+#if os(iOS)
 import SwiftUI
 import CoreServices
 import Photos
@@ -116,3 +117,4 @@ final class CameraWrapper: UIViewController, UINavigationControllerDelegate, UII
     }
 
 }
+#endif
