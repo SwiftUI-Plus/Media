@@ -2,17 +2,19 @@
 ![tv](https://img.shields.io/badge/tvOS-13-green)
 ![mac](https://img.shields.io/badge/macOS-10.15-green)
 
-# Media 
+# Media
+
+> Also available as a part of my [SwiftUI+ Collection](https://benkau.com/packages.json) – just add it to Xcode 13+
 
 A package for simplifying the user of the camera and the user's photo library in SwiftUI.
 
 ## Features
 
-- Dynamic property wrappers for fetching media from the photo library
-- Camera modifier for easily taking a photo
-- ImagePicker modifier for allowing the user to pick a photo from their library
+-   Dynamic property wrappers for fetching media from the photo library
+-   Camera modifier for easily taking a photo
+-   ImagePicker modifier for allowing the user to pick a photo from their library
 
-> Note: Permission requests and Info.plist values are not handled by this framework. You should use the standard UI to perform these actions as usual. 
+> Note: Permission requests and Info.plist values are not handled by this framework. You should use the standard UI to perform these actions as usual.
 
 ## Example
 
@@ -75,7 +77,7 @@ Since the library is also a `dynamic` property, updates occuring in the users li
 
 ## Custom Queries
 
-The property wrapper initializers provide various overrides to ensure you can customize the queries you need to perform. 
+The property wrapper initializers provide various overrides to ensure you can customize the queries you need to perform.
 
 In cases where a convenience initializer hasn't been provided, you can simply pass your own `PHFetchOptions` instance:
 
@@ -120,8 +122,8 @@ private var custom
 `PHAsset`
 
 ```swift
-// You can instantiate your results during init: 
-@FetchAssetList 
+// You can instantiate your results during init:
+@FetchAssetList
 private var assets: MediaResults<PHAsset>
 
 // Or, if you already have a set of results from a `PHFetchResult<PHAsset>` instance:
@@ -139,13 +141,13 @@ There are multiple overrides for all of the above to allow for most customizatio
 
 The primary purpose of this library is to simplify the usage of the `Photos` framework in SwiftUI applications. As such, permission requests and mutations are not included.
 
-Those APIs are not an issue that needs fixing by this library. 
+Those APIs are not an issue that needs fixing by this library.
 
 Instead you should continue to use the existing APIs available via the `Photos` framework. Since the use of `Photos` types is required, the library automatically imports `Photos` for you so adding an additional import is redundant.
 
 ## Installation
 
-The code is packaged as a framework. You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (__preferred__)
+The code is packaged as a framework. You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (**preferred**)
 
 To install using Swift Package Manager, add this to the `dependencies` section of your `Package.swift` file:
 
